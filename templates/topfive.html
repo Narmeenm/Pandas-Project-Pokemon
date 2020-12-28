@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Pandas project about Pokemon">
+     <link rel="stylesheet" href="../static/style.css" type=text/css>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+     <title>Top five Pokemon</title>
+  </head>
+  <body>
+    <img class="fastPoke" src='../static/386-speed.png'>
+     <div class="topfive-container">
+        {% for table in tables %}
+        <div class=top-five-titles>{{ titles[loop.index] }}</div><br>
+          {{ table|safe }}
+        {% endfor %}
+     </div>
+  </body>
+</html>
