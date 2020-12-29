@@ -23,7 +23,7 @@ def topfive():
     df = pd.read_csv('pokemon_data.csv')
     fast=df.sort_values('Speed',ascending=False).head(5).reset_index(drop=True).drop(columns=['#'])
     attacked=df.sort_values('Attack',ascending=False).head(5).reset_index(drop=True).drop(columns=['#'])
-    return render_template('topfive.html',tables=[fast.to_html(),attacked.to_html()],titles=["","Top five fastest Pokémon","Top five attacker Pokémon"])
+    return render_template('topfive.html',tables=[fast.to_html(classes='fastest'),attacked.to_html(classes='attacked')],titles=["","Top five fastest Pokémon","Top five attacker Pokémon"])
 
 @app.route('/legendary',methods=('GET','POST'))
 def legendaryPokemon():

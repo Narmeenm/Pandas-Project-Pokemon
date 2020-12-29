@@ -11,11 +11,11 @@
      <title>Top five Pokemon</title>
   </head>
   <body>
-    <img class="fastPoke" src='../static/386-speed.png'>
      <div class="topfive-container">
+       <div class="fastPoke"><img src='../static/386-speed.png'></div>
         {% for table in tables %}
-        <div class=top-five-titles>{{ titles[loop.index] }}</div><br>
-          {{ table|safe }}
+        <div class=top-five-titles>{{ titles[loop.index] }}<br><br></div>
+        <div class="top-five-tables">{{ table|safe }}</div>
         {% endfor %}
      </div>
   </body>

@@ -18,7 +18,7 @@ body,html{
     background-repeat: no-repeat;
     background-position: center center;
     overflow:scroll;
-    overflow-x:auto;
+    overflow-x:hidden;
     overflow-y:auto;
 
 }
@@ -68,7 +68,7 @@ h1{
 
 .type-container{
 
-  margin: 100px 100px 100px 700px;
+  margin: 50px 100px 0px 700px;
   width: 50%;
 }
 
@@ -128,24 +128,48 @@ h2{
 /*Top five pokemon design page */
 
 .topfive-container{
-  margin: 100px 100px 100px 600px;
+  margin: 30px 20px 100px 670px;
+  width: auto;
 }
 
 .top-five-titles{
-  background-color:red;
   text-align: center;
   font-family: var(--fontTitles);
-  font-size:20px;
+  font-size:22px;
+  font-weight:2;
 }
-
 .fastPoke{
-  width: 15%;
+  width:55%;
+  animation-name: mymove;
+  animation-duration: 0.7s;
+  padding-left: 700px;
+}
+.fastPoke img{
+  width: 30%;
   height:30%;
-  animation:zoomInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 2s;
 }
 
+@keyframes mymove {
+  from {transform: translate(0)}
+  to {transform: translateX(-700px)}
+}
+
+/* the legendary html page style */
+
+.legendary-container{
+  margin-left: 600px;
+  animation:legendary 0.5s linear alternate;
+}
+@keyframes legendary {
+  from {transform: translateY(100%);}
+  to {transform: translateY(-50%);}
+}
+h3{
+  font-family: var(--fontTitles);
+  font-size:22px;
+  text-align: center;
+  margin-top:40px;
+}
 @media only screen and (max-width:414px){
    body{
      background-image: url('../static/phonesize.png');
