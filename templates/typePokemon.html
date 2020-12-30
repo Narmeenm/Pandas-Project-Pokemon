@@ -5,6 +5,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="description" content="Pandas project about Pokemon">
      <link rel="stylesheet" href="../static/style.css" type=text/css>
+     <link rel="stylesheet" href="../static/popup.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
@@ -12,6 +13,20 @@
      <title>Find Pokemon bty type</title>
   </head>
   <body>
+    <button data-modal-target="#modal" class="learn-more">Learn More</button>
+    <div class="modal" id = "modal">
+      <div class="modal-header">
+        <div class="title">Find your Pokemon by the type</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+         here I sort the pokemon data by types, I choose main
+         different types : fire, grass,water and poison. I use the Pandas library in python3 .
+         so I start by reading the csv file with saving a copy in dataframe table. and I save three dataframe tables sorted by type 1.
+         I show this information through building website based on Flask framework.
+      </div>
+    </div>
+    <div id="overlay"></div>
     <div class="type-container">
         {% for table in tables %}
           <div class="title-types">
@@ -25,5 +40,6 @@
             {{ table|safe }}<br>
         {% endfor %}
     </div>
+    <script src="../static/popup.js"></script>
   </body>
 </html>
