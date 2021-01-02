@@ -1,7 +1,7 @@
 .modal{
   position:fixed;
-  top:50%;
-  left:50%;
+  top:30%;
+  left:20%;
   transform:translate(-50%, -50%) scale(0);
   transition:200ms ease-in-out;
   border: 10px solid;
