@@ -6,12 +6,14 @@
      <meta name="description" content="Pandas project about Pokemon">
      <link rel="stylesheet" href="../static/style.css" type=text/css>
      <link rel="stylesheet" href="../static/popup.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
      <title>Top five Pokemon</title>
   </head>
   <body>
+    <div class="back"><a href="/"><i class="fas fa-backward"></i></a></div>
     <button data-modal-target="#modal" class="learn-more"><svg width="418" height="433" viewBox="0 0 418 433" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <path d="M235.125 433H182.875C170.683 433 156.75 422.175 156.75 400.525V362.638C156.75 344.596 148.042 328.358 134.108 315.729C102.758 290.471 87.0833 254.388 87.0833 214.696C88.825 146.137 142.817 92.0125 207.258 90.2083C240.35 90.2083 271.7 102.837 294.342 126.292C316.983 149.746 330.917 182.221 330.917 216.5C330.917 254.388 315.242 290.471 285.633 313.925C269.958 326.554 261.25 346.4 261.25 364.442V405.938C261.25 420.371 249.058 433 235.125 433V433ZM209 108.25C153.267 108.25 106.242 156.962 104.5 214.696C104.5 248.975 118.433 281.45 144.558 301.296C163.717 317.533 174.167 339.183 174.167 362.638V400.525C174.167 404.133 174.167 414.958 182.875 414.958H235.125C240.35 414.958 243.833 411.35 243.833 405.938V364.442C243.833 340.988 256.025 315.729 275.183 299.492C299.567 279.646 313.5 248.975 313.5 216.5C313.5 187.633 303.05 160.571 282.15 138.921C262.992 119.075 236.867 108.25 209 108.25V108.25Z" fill="black"/>
@@ -53,6 +55,6 @@
         <div class="top-five-tables">{{ table|safe }}</div>
         {% endfor %}
      </div>
-  <script src="../static/popup.js"></script>   
+  <script src="../static/popup.js"></script>
   </body>
 </html>
