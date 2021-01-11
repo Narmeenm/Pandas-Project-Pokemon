@@ -15,12 +15,16 @@
   <body>
     <h1>Pokémon & DataFrame
        in Python</h1>
-       <a target="_blank" href="/RawData"><i class="fas fa-database"></i></a>
-       <a class="raw-data" target="_blank" href="/RawData"><i class="fas fa-database"></i></a>
+       <a class="raw-data" data-toggle="data" title="You can find the raw data here 📒" target="_blank" href="/RawData"><i class="fas fa-database"></i></a>
     <div class="flex-container">
       <a href="/pokemonType" class="circle-card">Find Pokemon by types</a>
       <a href="/topfive" class="circle-card">Top Five Pokemon</a>
       <a href="/legendary" class="circle-card">The Legendary Pokemon</a>
     </div>
   </body>
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="data"]').tooltip();
+    });
+</script>
 </html>
