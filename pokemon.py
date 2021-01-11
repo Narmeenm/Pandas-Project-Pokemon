@@ -30,6 +30,11 @@ def legendaryPokemon():
     df = pd.read_csv('pokemon_data.csv')
     legendary = df.loc[df['Legendary']==True].reset_index(drop=True).drop(columns=['#']).head(50)
     return render_template('legendary.html',table=legendary.to_html())
+
+@app.route('/RawData',methods=('GET','POST'))
+def veiwRawData():
+    df = pd.read_csv('pokemon_data.csv')
+    return render_template('csvData.html',table=df.to_html())
 ## Read Headers
 #print(df)
 #read each column
