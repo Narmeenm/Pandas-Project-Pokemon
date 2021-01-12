@@ -1,1 +1,1 @@
-web: gunicorn pokemon.wsgi
+web: gunicorn pokemon:app
